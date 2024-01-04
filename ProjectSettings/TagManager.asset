@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - monster
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - monster
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Hero
+    uniqueID: 3396677635
+    locked: 0
+  - name: GameEffect
+    uniqueID: 3745414429
+    locked: 0
+  - name: UI
+    uniqueID: 3563896293
+    locked: 0
+  - name: UIEffect
+    uniqueID: 2704552269
+    locked: 0
+  - name: Tutorial
+    uniqueID: 2617867201
+    locked: 0

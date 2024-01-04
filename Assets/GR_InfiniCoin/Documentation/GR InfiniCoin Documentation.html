@@ -1,0 +1,197 @@
+﻿<html>
+    <head>
+        <style>
+            body{
+                font-family: sans-serif;
+                font-size: 13px;
+                line-height: 18px;
+            }
+            
+            #container {
+                width: 66%;
+                margin: 0 auto;
+            }
+            
+            #gric_logo {
+                margin: 2em 0;
+                width: 33%;
+            }
+            
+            #code {
+                font-family: monospace;
+                font-weight: bolder;
+                color: #dbaa34;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="container">
+            <img id="gric_logo" src="../Demo/Resources/gric_logo.png">
+            
+            <p>
+                InfiniCoin is a numeric class for incremental games.<br/>
+                By using InfiniCoin, you can keep track of vastly large numbers for any use such as scoring or for in-game currency.
+            </p>
+            
+            <p>
+                While working with human readable values such as a million or a trillion, the naming conventions are standard. It is possible to store and display the score, when it is within the range of comprehensible numbers.
+            <p>
+                What if you want to develop an infinite idle game that has a structure where the score and, by extension, the upgrade costs constantly increase? InfiniCoin provides a system for exactly that.
+            </p>
+
+            <p>
+                InfiniCoin registers the power of 1000 and the base value of the number, and this way the class can represent values up to 999 x 1000 ^ 2 ^ 64. It supports comparisons and operations with other InfiniCoin objects, as well as other standard numeric classes, so that you can build your game engine easily and modularly.
+            </p>
+            
+            <p>
+                By using the Configuration class, the ICConfig, you can set the naming system for large numbers, define how to print the numbers, override names or even create your own naming systems.
+            </p>
+
+            <p>
+                The demo folder in this package contains 4 demos, displaying various use cases, starting from very basic initializations and operations, to a demo idle game that
+                uses InfiniCoin objects to record and track ever increasing values for the budget, asset prices, upgrade costs and production values.
+            </p>
+
+            <p>
+                Each demo contains its own documentation. For the functionality of this package, refer to the method and field list below.
+            </p>
+            
+            <section>
+                <h3>InfiniName</h3>
+                <p>
+                    Each InfiniCoin object is composed of two components: the base value, and the power of 1000. The power of 1000 defines the name of the number.
+                </p>
+
+                <p>
+                    The following 8 naming systems come as a default with this package. Unless overriden, each power of 1000 is named by the convention represented by one of the enumerations below. The default configuration is base26.
+                </p>
+
+                <p><strong>repeating: </strong>Powers of 1000 are represented by increasing letters. Number names go as:<br/>aa, bb, cc, ..., aaa, bbb, ccc</p>
+                <p><strong>repeatingCapital: </strong>Powers of 1000 are represented by increasing letters, in capital. Number names go as:<br/>AA, BB, CC, ..., AAA, BBB, CCC</p>
+                <p><strong>repeatingSingleStart: </strong>Powers of 1000 are represented by increasing letters, starting from single letters. Number names go as:<br/>a, b, c, ..., aa, bb, cc</p>
+                <p><strong>repeatingCapitalSingleStart: </strong>Powers of 1000 are represented by increasing letters, starting from single letters and written in capital. Number names go as:<br/>A, B, C, ..., AA, BB, CC</p>
+                <p><strong>base26: </strong>Powers of 1000 are represented by a base26 number system (without a '0' equivalent) where each digit is a letter. Number names go as:<br/>aa, ab, ac, ad, ..., ba, bb, bc, bd</p>
+                <p><strong>base26Capital: </strong>Powers of 1000 are represented by a base26 number system (without a '0' equivalent), where each digit is a letter and starts with single digits. Number names go as:<br/>a, b, c, d, ..., aa, ab, ac, ad</p>
+                <p><strong>base26SingleStart: </strong>Powers of 1000 are represented by a base26 number system (without a '0' equivalent) where each digit is a capital letter. Number names go as:<br/>AA, AB, AC, AD, ..., BA, BB, BC, BD</p>
+                <p><strong>base26CapitalSingleStart: </strong>Powers of 1000 are represented by a base26 number system (without a '0' equivalent), where each digit is a capital letter and starts with single digits. Number names go as:<br/>A, B, C, D, ..., AA, AB, AC, AD</p>
+            </section>
+            
+            <section>
+                <h3>ICConfig</h3>
+                <p>
+                    ICConfig is a static class that configures the behaviour of the InfiniCoin objects.
+                </p>
+                <h4>Public Fields</h4>
+                
+                <p><strong>InfiniName namingSystem: </strong>The current naming system for the InfiniCoin objects. Default value is InfiniName.base26</p>
+                <p><strong>bool verbose: </strong>Whether or not warning messages are displayed. Default value is false.</p>
+
+                <p><strong>int printPrecision: </strong>Read-only. Sets the number of decimal places for printing. Default value is 2.</p>
+                <p><strong>double printPadding: </strong>Read-only. Used for decimal place formatting. Default value is 100.</p>
+                <p><strong>int repeatingNameCap: </strong>Read-only. The limit for repeating naming systems, after which the letters are grouped. For instance, when the value is 4, the name after ZZZZ is A5, instead of AAAAA. Default value is 4.</p>
+
+                <p><strong>Dictionary&lt;long, string&gt; overriddenNames: </strong> Dictionary of overriden names. Default is empty.</p>
+
+                <p><strong>static string[] leading: </strong> Read-only. The string array for the first few, human readable powers of 1000. The default list is: "", "k", "m", "g", "b".</p>
+                <p><strong>static uint skip</strong> Read-only. Number of leading names, used for shifting the naming system accordingly.</p>
+
+                <h4>Public Methods</h4>
+                <p><strong>Reset(): </strong>Returns the ICConfig object to its default settings. That is: base26 naming system, verbose mode off, print precision is set to 2, repeating name is capped at 4, leading names are "", "k", "m", "g", "t" and all overridden names removed.</p>
+                <p><strong>OverrideName(string oldName, string newName): </strong>When the naming system is used, you might want to avoid certain words that are generated by the system. Or, you might want to implement your own naming system from scratch. Name overriding is used for this purpose. This function overrides the old name, defined by <span id="code">string oldName</span>, which is an existing name in the current system, with a new one, defined by <span id="code">string newName</span>.</p>
+                <p><strong>OverrideName(long key, string name): </strong>Similarly, this function replaces the default name for the <span id="code">long key</span> power of 1000 by <span id="code">string name</span></p>
+                <p><strong>OverrideNames(Dictionary&lt;long, string&gt; dict): </strong>This function appends the content of <span id="code">dict</span> to the current overriden name dictionary. </p>
+                <p><strong>RemoveNameOverrides(): </strong>Removes all the name overrides currently defined.</p>
+                <p><strong>RemoveNameOverride(string name): </strong>Removes the name override that is assigned to the default name <span id="code">string name</span></p>
+                <p><strong>RemoveNameOverride(long key): </strong>Removes the name override that is assigned to the power of 1000 <span id="code">long key</span></p>
+                <p><strong>SetPrintPrecision(int precision): </strong>Sets the number of decimal places for converting InfiniCoin objects to a string.</p>
+                <p><strong>SetRepeatingNameCap(int cap): </strong>Sets the repeating name cap, explained in public fields section.</p>
+                <p><strong>RemoveLeadingNames(): </strong>Removes all the leading names, meaning that the numbers will start to get generated names right from 1000^0.</p>
+                <p><strong>SetLeadingNames(string leadingName1, string leadingName2, ..., string leadingNameN): </strong>Sets the leading names as the given, arbitrary number of string objects, in the given order.</p>
+                <p><strong>SetLeadingNames(IEnumerable&lt;string&gt; leadingNames): </strong>Sets the leading names as the given, numerable collection of string objects.</p>
+                <p><strong>string Name(long kPow, bool useOverriden = true): </strong>Converts the power of 1000 to the name, based on the naming system. if <span id="code">useOverriden</span> is set to true, which is the default, then the overriden names are used. If set the false, the original name is returned.</p>
+                <p><strong>long Name2Power(string name): </strong>Converts the name to the power of 1000. This function does not use the overriden names.</p>
+            </section>
+            <section>
+                <h3>InfiniCoin</h3>
+                <h4>Public Fields</h4>
+                <p><strong>bool isNaN: </strong>Whether or not the number is rendered "not a number" as a result of a division by zero".</p>
+                <p><strong>long kPower: </strong> The power of 1000 assigned to the InfiniCoin object.</p>
+                <p><strong>double baseValue: </strong> The base value assigned to the InfiniCoin object. Although the actual value is a long number, this version corresponds to the numeric part you see when the number is printed.</p>
+
+                <h4>Public Methods</h4>
+                <p><strong>InfiniCoin(int i): </strong>Creates a new InfiniCoin object, equivalent to the <span id="code">int i</span>.</p>
+                <p><strong>InfiniCoin(long l): </strong>Creates a new InfiniCoin object, equivalent to the <span id="code">long l</span>.</p>
+                <p><strong>InfiniCoin(float f): </strong>Creates a new InfiniCoin object, equivalent to the <span id="code">float f</span>.</p>
+                <p><strong>InfiniCoin(double d): </strong>Creates a new InfiniCoin object, equivalent to the <span id="code">double d</span>.</p>
+
+                <p><strong>InfiniCoin(double baseValue, string name): </strong>Creates a new InfiniCoin object, defined by the base value <span id="code">double baseValue</span> and the power of 1000 that corresponds to the <span id="code">string name</span> in the current naming system.</p>
+                <p><strong>InfiniCoin(double baseValue, long kPower): </strong></p>
+                <p><strong>InfiniCoin(float baseValue, long kPower): </strong>Creates a new InfiniCoin object, defined by the base value <span id="code">float baseValue</span> and the power of 1000 equal to <span id="code">long kPower</span>.</p>
+                <p><strong>InfiniCoin(double baseValue, long kPower): </strong>Creates a new InfiniCoin object, defined by the base value <span id="code">double baseValue</span> and the power of 1000 equal to <span id="code">long kPower</span>.</p>
+
+                <p><strong>InfiniCoin(InfiniCoin copy): </strong>Creates a new InfiniCoin object that is equal to <span id="code">InfiniCoin copy</span>.</p>
+                <p><strong>InfiniCoin(): </strong>Creates a new InfiniCoin object that is equal to 0.</p>
+
+                <p><strong>SetPowerByName(string name): </strong>Sets the power of 1000 to the number that corresponds to <span id="code">string name</span> in the current naming system. If it does not correspond to a name, it is set to zero.</p>
+                <p><strong>Set1000Power(long pow): </strong>Sets the power of 1000 to <span id="code">long pow</span></p>
+                <p><strong>SetBaseValue(double value): </strong>Sets the base value to <span id="code">double value</span></p>
+                <p><strong>SetBaseValue(float value): </strong>Sets the base value to <span id="code">float value</span></p>
+
+                <p><strong>Recalculate(): </strong>Recalculates the base value and the power of 1000 so that the base value is always between 0 and 1000.</p>
+
+                <p><strong>Set(double baseVal, long pow): </strong>Sets the base value and the power of 1000 to <span id="code">double baseVal</span> and <span id="code">long pow</span>.</p>
+                <p><strong>Set(int i): </strong>Sets the base value and the power of 1000 so that it is equivalent to <span id="code">int i</span>.</p>
+                <p><strong>Set(long l): </strong>Sets the base value and the power of 1000 so that it is equivalent to <span id="code">long l</span>.</p>
+                <p><strong>Set(float f): </strong>Sets the base value and the power of 1000 so that it is equivalent to <span id="code">float f</span>.</p>
+                <p><strong>Set(double d): </strong>Sets the base value and the power of 1000 so that it is equivalent to <span id="code">double d</span>.</p>
+
+                <p><strong>string ToString(): </strong>Prints the InfiniCoin object based on the configuration defined on the static <span id="code">ICConfig</span> object. This overrides the default ToString method, so that InfiniCoin objects can be added to string objects like any other numeric class instance.</p>
+                <p><strong>string[] ToSplitString(): </strong>Prints the InfiniCoin object based on the configuration defined on the static <span id="code">ICConfig</span> object. Unlike the overriden <span id="code">ToString()</span> method, this function returns the numeric part and the name part separately.</p>
+
+                <h4>Static Functions</h4>
+                <p><strong>static InfiniCoin Floor(InfiniCoin a): </strong>Static class function that returns the floor of an InfiniCoin object. Note that this function is useless for numbers with a power of 1000 greater than 4, as the class starts losing integer resolution as a trade-off for high powers of 1000.</p>
+
+                <p><strong>static InfiniCoin Ceil(InfiniCoin a): </strong>Static class function that returns the ceil of an InfiniCoin object. Note that this function is useless for numbers with a power of 1000 greater than 4, as the class starts losing integer resolution as a trade-off for high powers of 1000.</p>
+
+                <p><strong>static InfiniCoin Max(a, b): </strong>Static function that returns the greater of two numbers, one being an InfiniCoin object, the other being another InfiniCoin object or an instance of any other numeric class.</p>
+                <p><strong>static InfiniCoin Min(a, b): </strong>Static function that returns the greater of two numbers, one being an InfiniCoin object, the other being another InfiniCoin object or an instance of any other numeric class.</p>
+                
+                <h4>Implicit conversions, Operators and Comparisons</h4>
+                <p>
+                    InfiniCoin objects can be implicitly initialized by assigning a numeric value like any other numeric class by defining them like this:<br/>
+                    <span id="code">InfiniCoin ic = 5000000;</span><br/>
+                    ic, when printed in default configuration, would read: "5.00 m"
+                </p>
+                <p>
+                    The following operations can be applied to InfiniCoin objects:<br/>
+                    <ul>
+                        <li><strong>+: </strong>InfiniCoin objects can be added to other InfiniCoin objects, as well as other numeric classes.</li>
+                        <li><strong>++: </strong>When incremented, the <strong>base value</strong> is incremented by one. For instance, 100k, when incremented by one, would become 101k, whereas 100g would become 101g. The former increases by 1000^1, while the latter increases by 1000^3.</li>
+                        <li><strong>-: </strong>InfiniCoin objects can be subtracted from other InfiniCoin objects. Other numeric classes can be subtracted from InfiniCoin objects and the result is again an InfiniCoin object. Since this is an unsigned class, the value, when below 0, is clamped at zero.</li>
+                        <li><strong>--: </strong>When decremented, the <strong>base value</strong> is decremented by one. For instance, 100k, when incremented by one, would become 99k, whereas 100g would become 99g. The former increases by 1000^1, while the latter increases by 1000^3.</li>
+                        <li><strong>*: </strong>InfiniCoin objects can be multiplied by other InfiniCoin objects, as well as other numeric classes.</li>
+                        <li><strong>/: </strong>InfiniCoin objects can be divided by other InfiniCoin objects. InfiniCoin objects can be divided by other numeric classes, and the result is again an InfiniCoin object. When divided by zero, the InfiniCoin object becomes NaN.</li>
+                    </ul>
+                </p>
+    
+                <p>
+                    The following comparisons are available for InfiniCoin objects:
+                    <ul>
+                        <li><strong>==: </strong> InfiniCoin objects can be checked for equality against other InfiniCoin objects, as well as other numeric classes.</li>
+
+                        <li><strong>!=: </strong> InfiniCoin objects can be checked for inequality against other InfiniCoin objects, as well as other numeric classes.</li>
+
+                        <li><strong>&lt;: </strong> InfiniCoin objects can be compared to see if they are less than other InfiniCoin objects, as well as other numeric classes.</li>
+
+                        <li><strong>&gt;: </strong> InfiniCoin objects can be compared to see if they are greater than other InfiniCoin objects, as well as other numeric classes.</li>
+
+                        <li><strong>&le;: </strong> InfiniCoin objects can be compared to see if they are less than or equal to other InfiniCoin objects, as well as other numeric classes.</li>
+
+                        <li><strong>&ge;: </strong> InfiniCoin objects can be compared to see if they are greater than or equal to other InfiniCoin objects, as well as other numeric classes.</li>
+                    </ul>
+                </p>
+            </section>
+        </div>
+    </body>
+</html>

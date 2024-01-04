@@ -1,0 +1,596 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1683929330793492488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1683929330793492494}
+  - component: {fileID: 1683929330793492492}
+  - component: {fileID: 1683929330793492495}
+  - component: {fileID: 1683929330793492493}
+  - component: {fileID: 1683929330793492483}
+  - component: {fileID: 1683929330793492482}
+  - component: {fileID: 1683929330793492481}
+  - component: {fileID: 1683929330793492480}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1683929330793492494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683929330793492488}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6837012, y: 0.9297865, z: -2.7667327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1683929330793492492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683929330793492488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b10b9a52de4fd4d85ecd69717df5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1683929330793492495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683929330793492488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a5fb38cb76d1a4f878689f29e1f189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickGoldChecker:
+    kPow: 0
+    baseVal: 0
+  isRaidAutoPlay: 0
+  rankRenewTime: 0
+  bMakeNickName: 0
+  strNickName: 
+  IsNewCollection: 0
+  CollectionList: 
+  Pack1: 0
+  MapStageIndex: 0
+  level1MapStage: 0
+  level2MapStage: 0
+  level3MapStage: 0
+  level4MapStage: 0
+  level5MapStage: 0
+  TransTierMonsterCount: 0
+  TransTier: 0
+  transTutorial: 0
+  GatchaCount: 0
+  achivement_time: 0
+  materialCount: 0
+  TotalreBrithCount: 0
+  subQuestIndex: 0
+  subQuestLevel: 0
+  subQuestNow: 0
+  TutorialList: 
+  UserID: 
+  TutorialIndex: 0
+  TotalGold:
+    kPow: 0
+    baseVal: 0
+  TotalSoul:
+    kPow: 0
+    baseVal: 0
+  TotalGem:
+    kPow: 0
+    baseVal: 0
+  TotalAltarCoin:
+    kPow: 0
+    baseVal: 0
+  MaxLevel_rank_Nanoo: 0
+  Stage_Nanoo: 0
+  AltarLevel: 0
+  AltarPercent: 0
+  Level: 0
+  MaxLevel: 0
+  MaxLevel_rank: 0
+  RaidMaxLevel: 0
+  RaidNowLevel: 0
+  bSave: 0
+  heroPos: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  heroExpeditionPos: fefffffffefffffffefffffffefffffffefffffffefffffffefffffffeffffff
+  heroExpeditionComplete: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  heroraidPos: ffffffffffffffffffffffffffffffffffffffff
+  heroTransPos: 0
+  MaxMonsterCount: 0
+  MonsterCount: 0
+  IsAutoPlay: 0
+  SoulAblityList: []
+  isBGM: 0
+  isFx: 0
+  iLangueageType: 0
+  isNewHero: 0
+  raidTicketCount: 0
+  isNewItem: 0
+  IsNewSmith: 0
+  mapStageClearSrc: {fileID: 0}
+  transDungeonGameSrc: {fileID: 0}
+  MapList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  itemEffectController: {fileID: 0}
+  bItemGetGold: 0
+  MaxLevel_Achivement: 0
+  subquestType: 9
+  bChect: 0
+  defaultExpeditionTime: 0
+  mainCamera: {fileID: 0}
+  NormalBoxCost: 0
+  SpeacialBoxCost: 0
+  adsType: 3
+  timeManager: {fileID: 1683929330793492492}
+  defaultNormalBoxTime: 0
+  defaultSpeacialBoxTime: 0
+  bMoveNew: 0
+  EnemyPos: {fileID: 0}
+  EnmeyPos_trans: {fileID: 0}
+  bStartEnemy_trans: 0
+  myGridMoveManager: {fileID: 0}
+  HeroList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  HeroPosTransfrom:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  HeroPos_Src:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyManager: {fileID: 1683929330793492493}
+  transenemyManager: {fileID: 0}
+  CoinCollectionEffect: {fileID: 0}
+  GemCollectionEffect: {fileID: 0}
+  materialCollectionEffect: {fileID: 0}
+  ScrollCollectionEffect: {fileID: 0}
+  materialCollection_achivementEffect: {fileID: 0}
+  hp:
+    kPow: 0
+    baseVal: 0
+  bStartBoss: 0
+  bStartEnemy: 0
+  Lv1HeroIndex: 
+  Lv2HeroIndex: 
+  Lv3HeroIndex: 
+  Lv4HeroIndex: 
+  Lv5HeroIndex: 
+  ScrollSprite:
+  - {fileID: -7146883179239272607, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: 2394701018525770878, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: 2841460659234336652, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: -5623338731038551253, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: -3906784944225678171, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: -4651452223793678092, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: -4180593904269417003, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: 5611704624586214217, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: 6128915944603182768, guid: fc6b51def2ccf834dbac66d56e57488f, type: 3}
+  - {fileID: 21300000, guid: e1bbf80807fd8ba45ab1c7307b8df03d, type: 3}
+  - {fileID: 21300000, guid: d2ad8ca0d596a1f4d8219ccabf87c3b2, type: 3}
+  - {fileID: 21300000, guid: 0de805699d42fd64bb403f95f9856ede, type: 3}
+  - {fileID: 21300000, guid: d12a00845e0826f4aafccddc29cad6fa, type: 3}
+  - {fileID: 21300000, guid: 667f3c50a1892e246b80bcccc1764e91, type: 3}
+  - {fileID: 21300000, guid: 14f3250034bdc0442bd6c1e7c0b3dd77, type: 3}
+  - {fileID: 21300000, guid: ccdcb81d022b0f64c909b593e8ea82ac, type: 3}
+  - {fileID: 21300000, guid: 1c4023674e0370143a0551c38a279877, type: 3}
+  - {fileID: 21300000, guid: 093b71303d5a9db4abe317fe8fc1477c, type: 3}
+  - {fileID: 21300000, guid: 007c1d6fea6a2014a941ddba36b9f7bf, type: 3}
+  - {fileID: 21300000, guid: d6cabb10059f34f4bb5f83ed4fcc9022, type: 3}
+  - {fileID: 21300000, guid: 1b9b6569cacdd5a48beadaee8eeeb141, type: 3}
+  - {fileID: 21300000, guid: 54a7dab672974254abcff88c499050bf, type: 3}
+  - {fileID: 21300000, guid: 0d6956be4f37821439eee7c2c476148e, type: 3}
+  - {fileID: 21300000, guid: 7a1383d5af9ef5846aba2af6fdaafebc, type: 3}
+  - {fileID: 21300000, guid: 386e7a96cee74b145bd4ca0cd203e3af, type: 3}
+  - {fileID: 21300000, guid: 3c89e18677978754498ba8a7a5cb3001, type: 3}
+  - {fileID: 21300000, guid: e7941d276368c68468947b7d5cccd90b, type: 3}
+  - {fileID: 21300000, guid: ad736f8eef8b37b44b9be9ee14b56633, type: 3}
+  - {fileID: 21300000, guid: 58412500fd8ce3047bfe9161dea76c1d, type: 3}
+  - {fileID: 21300000, guid: 50fe9abc042ae96429e155a8e64b5a90, type: 3}
+  - {fileID: 21300000, guid: f905b04dc7ad1dd4b80f252c9cb8b7a4, type: 3}
+  - {fileID: 21300000, guid: ae47672f6722b5247b8eebe70b86c672, type: 3}
+  - {fileID: 21300000, guid: 43de9a9db7493184bad365e69ad439ae, type: 3}
+  - {fileID: 21300000, guid: c97173c9d7eb4244d8270e188b3a8ac8, type: 3}
+  - {fileID: 21300000, guid: d8b17fd853c25614f86b24bf9a1957ad, type: 3}
+  - {fileID: 21300000, guid: 98356aee1de8e1c48af6d684cb1e27f8, type: 3}
+  - {fileID: 21300000, guid: ce651bde1809bb345b65b9aad7f71030, type: 3}
+  - {fileID: 21300000, guid: f7479cc7300d70440876437ea2a5d459, type: 3}
+  - {fileID: 21300000, guid: 239a8eb0ac8d8164998814626fe7741c, type: 3}
+  - {fileID: 21300000, guid: b11dc9379b0e2e34993f48d1452dcb3d, type: 3}
+  - {fileID: 21300000, guid: 7f11010a5f6bec343a2a1168d0c64c7b, type: 3}
+  - {fileID: 21300000, guid: 676d958244667a64c8db32377ccb12f2, type: 3}
+  - {fileID: 21300000, guid: a5457ce40470b7441a015143d3e683ca, type: 3}
+  - {fileID: 21300000, guid: ee9c0c3c560f0f94983b9ff810d9c72f, type: 3}
+  - {fileID: 21300000, guid: 6bd30fc767ac0f04e805f4888db9e753, type: 3}
+  ItemsSprite:
+  - {fileID: -7312425153991959716, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -7716353227483746434, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 7580825589941924997, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 8860352858612385732, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 2387837609042818853, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -1617298919168725266, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 2878294064320302269, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 3268927865226667061, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -6223922368954608369, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -5432312505413101226, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -7362093755509547073, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 7295510852796280555, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -5390237966432478434, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -7503433707822653498, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 8759643607358196716, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -7653368428959716318, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -2288119863714659157, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -7206315973911134061, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -7396728347702047129, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -3542563812327899221, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -3520638699817465030, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 4618493584811978314, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -5082778876767181662, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -4360822415758806873, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 1262193760116701207, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -5580502463286461213, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -5306066562759186880, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 1977694963913385298, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 545091996194548474, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -4470609050156619479, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 2378732930412732952, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 3405554528970724349, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 8515461333592683870, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -5047241847307032282, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 7304692930793507048, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 6308692829819059017, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -8255494816985082141, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -6499054704746564674, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 1287111447632883335, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -6844596805190570070, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: -8042871885156208766, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 4655391199662686549, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 4192295672368939536, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 5597930358779410170, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  - {fileID: 3442704747141440205, guid: 776e49ab07916014cb21747fb2e206c4, type: 3}
+  SelectHeroPos: -1
+  m_Card: 0
+  bStartMove: 0
+  bEndStage: 0
+  TrasnUpgradeAttack: 0
+  AdsGold:
+    kPow: 0
+    baseVal: 0
+  transCost:
+    kPow: 0
+    baseVal: 0
+  PanelsTrans: {fileID: 0}
+  m_OfflineRewardCost:
+    kPow: 0
+    baseVal: 0
+  adAltarCount:
+    kPow: 0
+    baseVal: 0
+  m_itemType: 0
+  m_RaiditemType: 0
+  startTrans: 0
+  m_tierType: 0
+  m_scrollItemType: 0
+  bstartDungoen: 1
+--- !u!114 &1683929330793492493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683929330793492488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7eafe91c7a49d4caded19a58d086c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackPointsList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Mimic: {fileID: 0}
+  Hp:
+    kPow: 0
+    baseVal: 0
+  MaxHp:
+    kPow: 0
+    baseVal: 0
+  ExpolsionEffect: {fileID: 0}
+  Enemy: {fileID: 0}
+  EnemyList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BossList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Enmey_Lv1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Enmey_Lv2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Enmey_Lv3:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Enmey_Lv4:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Enmey_Lv5:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  bBoss: 0
+--- !u!114 &1683929330793492483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683929330793492488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b704b9030eb8c45ac093144ec23eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1683929330793492482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683929330793492488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540ed5538a3e65d489e3549b83ed6332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1683929330793492481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683929330793492488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8219b317a4fe48bcfc55f97cfb9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FxList: []
+  BGMList: []
+--- !u!114 &1683929330793492480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683929330793492488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd23630338d9134c97f56e597da2e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompleteTutorialPanel: {fileID: 0}
+  TutorialCanvas: {fileID: 0}
+  Tutorial_Click: {fileID: 0}
+  Tutorial_UpgradeClick_1: {fileID: 0}
+  Tutorial_UpgradeClick_2: {fileID: 0}
+  Tutorial_buff_1: {fileID: 0}
+  Tutorial_buff_2: {fileID: 0}
+  Tutorial_shop_1: {fileID: 0}
+  Tutorial_shop_2: {fileID: 0}
+  Tutorial_shop_3: {fileID: 0}
+  Tutorial_shop_4: {fileID: 0}
+  Tutorial_SelectHero_1: {fileID: 0}
+  Tutorial_SelectHero_2: {fileID: 0}
+  Tutorial_SelectHero_3: {fileID: 0}
+  Tutorial_SelectHero_4: {fileID: 0}
+  Tutorial_HeroLIst: {fileID: 0}
+  Tutorial_AutoMove: {fileID: 0}
+  TutorialRewardPanel: {fileID: 0}
